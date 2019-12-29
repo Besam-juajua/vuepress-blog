@@ -5,12 +5,15 @@
         </transition>
         <div class="theme-container">
             <transition name="fade">
-                <header class="theme-slider main-box" v-if="toMove">
+                <header class="theme-slider main-box">
                     <slider :path="pathname"/>
                 </header>
             </transition>
             <section class="content shadow-box">
-                <bread-crumb :list="navPath" style="padding: 16px 0 30px;"/>
+                <bread-crumb :list="navPath" style="margin: 0 20px 20px"/>
+                <transition name="bounceUp">
+                    <Content v-if="toMove" style="padding: 0 36px; box-sizing: border-box; background: #fff;" class="absolute"/>
+                </transition>
                 <transition name="bounceUp">
                     <home :path="fullPath" v-if="pathname === '/home/'" class="absolute"/>
                 </transition>
@@ -29,9 +32,7 @@
                 <transition name="lightSpeed">
                     <besam v-if="pathname === '/besam/'"/>
                 </transition>
-                <transition name="lightSpeed">
-                    <Content v-if="toMove"/>
-                </transition>
+                
             </section>
             
         </div>
@@ -144,28 +145,31 @@ export default {
         position absolute
         left 24%
         width 76%
-        padding 20px 36px
+        padding 10px 0
         box-sizing border-box
-        // background #fff
+        background #fff
     
         .absolute
             position absolute;
             width 100%;
-
 
     @media screen and (min-width 1450px)
         .content
             width calc(100% - 276px)
             left 276px
     
-    @media screen and (max-width 768px) 
+    @media screen and (max-width 768px)
         .theme-container 
-            width 96%
+            min-width 368px
+            width 100%
             margin 0 auto
-        
         .theme-slider 
             display none
+        .content
+            left 0
+            width 100%
         
+		
     
 
 </style>

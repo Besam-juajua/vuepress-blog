@@ -1,5 +1,5 @@
 <template>
-  <div class="slider-container">
+  <div class="home-container">
       <h1>home</h1>
 
         
@@ -31,7 +31,8 @@ export default {
 }
 </script>
 <style scoped lang="stylus">
-
+    .home-container
+        background #fff
     
 
     // absolute-border()

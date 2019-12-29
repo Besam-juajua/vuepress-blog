@@ -1,5 +1,5 @@
 <template>
-  <div class="slider-container">
+  <div class="category-container">
         <!-- <bread-crumb :list="navPath" style="padding: 16px 0 30px;"/> -->
         <!-- <div class="main"> -->
             <transition name="bounceUp">
@@ -93,7 +93,10 @@ export default {
 }
 </script>
 <style scoped lang="stylus">
-
+    .category-container
+        padding 0 4%
+        box-sizing border-box
+        background #fff
     .tag-group
         display flex
         flex-wrap wrap
@@ -108,7 +111,7 @@ export default {
         margin 5px
         position relative
         overflow hidden
-        height 210px
+        height 160px
         border 5px solid gray
     
         .img
@@ -118,28 +121,41 @@ export default {
             img 
                 opacity 0
                 min-width 100%
-                height 210px
+                height 160px
 
+        .tag-name
+            position absolute
+            left 0
+            top 0
+            width 100%
+            height 100%
+            line-height 160px
+            text-align center
+            font-size 46px
+            color #dfdfdf
+            background #000
+            opacity .4
         .info
             position absolute
             bottom 0px
-            color #ffffff
+            color #dfdfdf
             left 0
             right 0
             margin auto
             background-color rgba(0, 0, 0, 0.3)
-            line-height 44px
-            height 0px
+            line-height 60px
+            height 60px
             width 100%
             text-align center
+            font-size 32px
       
         &:hover 
             .info
                 height 100%
                 width 100%
-                line-height 210px
+                line-height 160px
                 transition all 0.2s ease-out
-                color white
+                color #fff
                 font-size 56px
                 font-weight bold
 </style>

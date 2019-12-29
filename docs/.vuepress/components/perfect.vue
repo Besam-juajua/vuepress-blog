@@ -1,5 +1,5 @@
 <template>
-  <div class="slider-container">
+  <div class="perfect-container">
       <h1>perfect</h1>
       <Content/>
   </div>
@@ -27,4 +27,6 @@ export default {
 }
 </script>
 <style scoped lang="stylus">
+    .perfect-container
+        background #fff
 </style>

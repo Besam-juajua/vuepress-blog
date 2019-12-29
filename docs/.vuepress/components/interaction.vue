@@ -1,5 +1,5 @@
 <template>
-  <div class="slider-container">
+  <div class="interaction-container">
         <h1>interaction</h1>
         
         <Content/>
@@ -28,4 +28,6 @@ export default {
 }
 </script>
 <style scoped lang="stylus">
+    .interaction-container
+        background #fff
 </style>
